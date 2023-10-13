@@ -73,7 +73,7 @@ const Demo = () => {
             <div className='w-full'>
              {isFetching? <img src={loader} className='mx-auto my-6 w-20 h-20 object-contain'/> : error && <p>There is an error, something went wrong</p>}
               
-              {article.summary && 
+              {article.summary && !isLoading && 
               <>
               <h3 className=' py-6 px-4 inline-block mx-auto text-3xl font-semibold'>Summarized Content</h3>
               <div className='font-inter px-4'> {parse(article.summary)}  </div> 
